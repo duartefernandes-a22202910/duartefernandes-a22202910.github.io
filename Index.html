@@ -3,22 +3,34 @@
 <head>
   <meta charset="utf-8">
   <title>Primeira Página</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header>
     <h1>Primeira Página Web!</h1>
-  </header>
 
+  </header>
+    <nav>
+      <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+    </nav>
   <main>
-    <p>Eis a minha primeira página Web!</p>
-    <p>
-      Na Unidade Curricular de
-      <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232">
-        Desenvolvimento de Interfaces Web
-      </a>
-      abordaremos as seguintes tecnologias Web &#127760;:
-    </p>
+    <section id="introducao">
+      <h2>Introdução</h2>
+        <p>Eis a minha primeira página Web!</p>
+        <p>Na Unidade Curricular de
+          <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232">
+          Desenvolvimento de Interfaces Web
+          </a>
+          abordaremos as seguintes tecnologias Web &#127760;:
+        </p>
+      </section>
+    <section id="tecnologias">
+      <h2>Tecnologias a aprender</h2>  
     <ul>
       <li>HTML</li>
       <li>CSS</li>
@@ -27,6 +39,13 @@
     </ul>
     <p>Iremos criar soluções criativas!</p>
     <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web">
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p>O meu nome é <mark>Duarte Fernandes</mark> e esta é a minha primeira página. 🚀</p>
+      <blockquote>
+        "A Web não é apenas tecnologia, é criatividade e partilha."
+      </blockquote>
+    </section>
   </main>
 
   <footer>
