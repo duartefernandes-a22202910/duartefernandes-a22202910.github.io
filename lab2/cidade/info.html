@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Cidade</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header>
@@ -18,6 +19,48 @@
         <main>
             <h2>Informações</h2>
             <h3 id="tabela">Tabela sobre Roma</h3>
+
+            <style>
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    text-align: left;
+                    font-family: Arial, sans-serif;
+                }
+
+                th {
+                    background-color: #333;
+                    color: #ffffff; /* texto branco */
+                    padding: 10px;
+                }
+
+                td {
+                    background-color: #f9f9f9;
+                    color: #222; /* texto escuro */
+                    padding: 10px;
+                }
+
+                /* Estilizando linhas alternadas */
+                tbody tr:nth-child(even) td {
+                    background-color: #eaeaea;
+                }
+
+                /* Estilizando link */
+                td a {
+                    color: #1a73e8; /* azul Google */
+                    text-decoration: none;
+                }
+
+                td a:hover {
+                    text-decoration: underline;
+                }
+
+                /* Opcional: cor diferente para a coluna do site */
+                td:last-child {
+                    color: #006400; /* verde escuro */
+                }
+            </style>
+
             <table border="1" cellpadding="10" cellspacing="0">
                 <thead>
                     <tr>
@@ -38,9 +81,11 @@
                     <tr>
                         <td>Densidade Populacional: 2.237 habitantes/km²</td>
                         <td>Região: Lácio, Itália</td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
+
             <h3 id="curiosidades">Curiosidades sobre Roma</h3>
             <div class="curiosidades">
                 <ul>
