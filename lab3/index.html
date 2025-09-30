@@ -4,24 +4,37 @@
         <meta charset="UTF-8">
         <title>Cidade</title>
         <link rel="stylesheet" href="cidade/styles.css">
-        <nav>
-            <a href="cidade/index.html">Home</a>
-            <a href="cidade/local.html">Local</a>
-            <a href="cidade/multimedia.html">Multimédia</a>
-            <a href="cidade/info.html">Informação</a>
-            <img src="cidade/images/Roma.png" alt="Vista da cidade" width="600">
-        </nav>    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+           img {
+                display: block;
+                max-width: 80%;
+                margin: 20px auto;
+                border-radius: 8px;
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>A cidade de Roma</h1>
+            <nav class="menu">
+                <button class="menu-toggle">☰ Menu</button>
+                <div class="menu-links">
+                    <a href="cidade/index.html">Home</a>
+                    <a href="cidade/local.html">Local</a>
+                    <a href="cidade/multimedia.html">Multimédia</a>
+                    <a href="cidade/info.html">Informação</a>
+                </div>
+            </nav>
+            <img src="cidade/images/Roma.png" alt="Vista da cidade" width="600">
         </header>
-        <main>
-            <h2>Home</h2>
-            <p>A cidade de Roma é muito linda!!!</p>
-        </main>
         <footer>
             <p>DIW 2025</p>
         </footer>
+        <script>
+            document.querySelector(".menu-toggle").addEventListener("click", () => {
+                document.querySelector(".menu-links").classList.toggle("active");
+            });
+        </script>
     </body>
 </html>

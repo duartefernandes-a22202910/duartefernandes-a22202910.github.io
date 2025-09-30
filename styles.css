@@ -76,7 +76,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* permite quebrar linha no mobile */
+  flex-wrap: wrap; 
 }
 
 /* Card individual */
@@ -102,12 +102,11 @@ body {
 }
 
 .card p {
-  font-size: 1rem;
   margin-bottom: 1.5rem;
+  font-size: 1rem
 }
 
 
-/* Disciplina */
 /* Secção Disciplina */
 .disciplina {
   height: 100vh;
@@ -118,7 +117,7 @@ body {
   justify-content: center;
   gap: 2rem;
   padding: 3rem;
-  flex-wrap: wrap; /* garante que não quebra mal no mobile */
+  flex-wrap: wrap;
 }
 
 .disciplina-texto {
@@ -151,12 +150,12 @@ body {
 /* Responsivo */
 @media (max-width: 768px) {
   .disciplina {
-    flex-direction: column; /* passa para coluna */
+    flex-direction: column;
     text-align: center;
   }
 
   .disciplina-img img {
-    max-width: 80%; /* evita ocupar ecrã todo */
+    max-width: 80%;
   }
 }
 
@@ -169,15 +168,17 @@ footer {
   color: #fff;
 }
 
-nav ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1rem;
+/* Navegação */
+nav ul{ 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  gap: 1rem; 
 }
 
-nav a{
+
+nav a{ 
   text-decoration: none;
-  color: inherit;
+  color: inherit; 
 }
