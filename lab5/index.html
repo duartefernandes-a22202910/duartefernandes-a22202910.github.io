@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório 5 - JavaScript 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo ao meu laboratório!</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2 id="passaRato">1. Passa por aqui!</h2>
+        </section>
+
+        <section>
+            <h2 id="textoColorido">2. Pinta-me!</h2>
+
+            <button class="color" data-color="purple">Roxo</button>
+            <button class="color" data-color="orange">Laranja</button>
+            <button class="color" data-color="teal">Turquesa</button>
+            <button class="color" data-color="deeppink">Cor-de-rosa</button>
+        </section>
+
+        <section>
+            <h2>3. Experimenta escrever...</h2>
+            <input type="text" id="inputTexto">
+        </section>
+
+
+        <section>
+            <h2>4. Escolha uma cor:
+             <select onchange="document.body.style.backgroundColor = this.value">
+                <option value="white">White</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+            </h2>
+        </section>
+
+
+        <section>
+            <h2>5. 
+            <button id="botaoConta" onclick="incrementarContador()">Conta!</button>
+            <span id="contador">33</span></h2>
+        </section>
+
+ 
+        <section>
+            <form>
+                <h2>6. 
+                <input id="nome" type="text" placeholder="Insira o seu nome" required>
+                <input id="idade" type="number" placeholder="Insira a sua idade" required>
+                <input type="submit" value="Submit"></h2>
+            </form>
+        </section>
+
+        <p id="mensagem"></p> 
+
+        <section>
+            <h2>7. Automatic Counter:
+            <p id="counter"></p></h2>
+        </section>       
+    </main>
+
+    <footer>
+        <p>© DIW 2025</p>
+    </footer>
+
+    <!-- HTML já carregado! -->
+    <script defer src="scripts/main.js"></script>
+</body>
+</html>
