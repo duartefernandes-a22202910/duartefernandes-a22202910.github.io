@@ -1,7 +1,7 @@
 // --- 1. Passa por aqui (com toggle) ---
 const h2PassaRato = document.getElementById("passaRato");
 
-h2PassaRato.addEventListener("click", function() {
+h2PassaRato.addEventListener("mousemove", function() {
   // alterna uma classe CSS
   h2PassaRato.classList.toggle("ativo");
 
@@ -14,25 +14,6 @@ h2PassaRato.addEventListener("click", function() {
 });
 
 
-
-let contador = 33;
-
-/*
-// --- 2. Pinta-me! ---
-
-function pintarVermelho() {
-  document.getElementById("textoColorido").style.color = "red";
-}
-
-function pintarVerde() {
-  document.getElementById("textoColorido").style.color = "green";
-}
-
-function pintarAzul() {
-  document.getElementById("textoColorido").style.color = "blue";
-}
-*/
-
 // --- 2. Pinta-me! (versão com querySelectorAll e data-color) ---
 document.querySelectorAll("button.color").forEach((button) => {
   button.addEventListener("click", () => {
@@ -40,7 +21,6 @@ document.querySelectorAll("button.color").forEach((button) => {
     const texto = document.getElementById("textoColorido");
 
     texto.style.color = cor;
-    texto.textContent = `Adoro a cor ${cor}! 🌈`;
   });
 });
 
@@ -51,9 +31,18 @@ const cores = ["lightcoral", "lightyellow", "lightblue", "lightgreen"];
 
 let indiceCor = 0;
 
-inputTexto.addEventListener("keydown", function() {
-  indiceCor = (indiceCor + 1) % cores.length;
-  inputTexto.style.backgroundColor = cores[indiceCor];
+inputTexto.addEventListener("keydown", function() { 
+  setTimeout(() => {
+      if (inputTexto.value.length === 0) {
+        // Se estiver vazio fundo branco
+        inputTexto.style.backgroundColor = "white";
+        indiceCor = 0;
+      } else {
+        // Alterna cor
+        indiceCor = (indiceCor + 1) % cores.length;
+        inputTexto.style.backgroundColor = cores[indiceCor];
+      }
+    }, 0);
 });
 
 /*
@@ -79,53 +68,11 @@ document.querySelector('#cor').onchange = function() {
   document.body.style.backgroundColor = this.value;
 };
 
-// --- 5. Conta ---
+
+// --- 5. Conta... --- no HTML
+
+// --- 6. Formulário... --- no HTML
+
+// --- Exercício 7: contador automático --- no HTML
 
 
-function incrementarContador() {
-  contador++;
-  document.getElementById("contador").textContent = contador;
-}
-
-// --- 6. Formulário... ---
-document.querySelector('form').onsubmit = (e) => {
-  e.preventDefault(); // impede o reload da página
-
-  const nome = document.querySelector('#nome').value;
-  const idade = document.querySelector('#idade').value;
-  const msg = document.querySelector('#mensagem');
-
-  msg.textContent = `Olá, o ${nome} tem ${idade}!`;
-
-  // adiciona listener apenas depois de mostrar a mensagem
-  setTimeout(() => {
-    document.addEventListener('click', limparMensagem);
-  }, 0);
-};
-
-function limparMensagem() {
-  document.querySelector('#mensagem').textContent = '';
-  document.querySelector('#nome').value = '';
-  document.querySelector('#idade').value = '';
-
-  // remove o listener para não continuar ativo
-  document.removeEventListener('click', limparMensagem);
-}
-
-
-// --- Exercício 7: contador automático ---
-let counter = 0;
-let intervalo = null;
-
-function iniciarContador() {
-  if (intervalo === null) { // garante que só começa uma vez
-    intervalo = setInterval(() => {
-      counter++;
-      document.querySelector('#counter').textContent = counter;
-    }, 1000); // incrementa a cada 1 segundo
-  }
-}
-
-// Inicia o contador assim que o utilizador em qualquer elemento da página
-document.addEventListener('input', iniciarContador);
-document.addEventListener('click', iniciarContador);
