@@ -1,0 +1,95 @@
+/* ====== Estilos gerais ====== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* ====== Cabeçalho e navegação ====== */
+header, footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ====== Estrutura principal ====== */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* ====== Secções ====== */
+section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+/* ====== Layout flex para produtos e cesto ====== */
+.lista-produtos,
+.lista-cesto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ====== Modelo de artigo (produto) ====== */
+article {
+    flex: 1 1 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ====== Rodapé ====== */
+footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* ====== Responsividade ====== */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #produtos, #cesto {
+        flex: 1;
+    }
+}
