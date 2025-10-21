@@ -9,7 +9,7 @@ function carregarProdutos(listaProdutos) {
     // Obtém o elemento pai onde os produtos serão inseridos
     const secaoProdutos = document.querySelector(".lista-produtos");
 
-    // Percorre cada produto
+    // Percorrer cada produto
     listaProdutos.forEach(produto => {
         console.log(produto.id, produto.title); // Verifica dados na consola
 
@@ -19,12 +19,12 @@ function carregarProdutos(listaProdutos) {
     });
 }
 
-// Função que cria o elemento <artigo> com os dados do produto
+// Função que cria o elemento <article> com os dados do produto
 function criarProduto(produto) {
     // Cria o elemento principal
     const artigo = document.createElement("article");
 
-    // Cria os sub-elementos sem usar <div>
+    // Cria os subelementos sem usar <div>
     const titulo = document.createElement("h3");
     titulo.textContent = produto.title;
 
@@ -48,17 +48,15 @@ function criarProduto(produto) {
     botao.textContent = "Adicionar ao cesto";
     botao.addEventListener("click", () => {
         console.log(`Produto ${produto.id} adicionado ao cesto.`);
-        // Aqui poderás adicionar o código para realmente mover o produto ao cesto
+      
     });
 
-    // Junta tudo ao artigo
+    
     artigo.append(titulo, imagem, categoria, descricao, preco, rating, botao);
-
-    // Retorna o artigo completo
     return artigo;
 }
 
-// Exemplo simples de função para adicionar produtos ao cesto
+// Função para adicionar produtos ao cesto
 function adicionarAoCesto(produto) {
     const cesto = document.querySelector(".lista-cesto");
 
