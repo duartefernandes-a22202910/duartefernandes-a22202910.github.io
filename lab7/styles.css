@@ -82,6 +82,40 @@ nav a:focus {
   outline: none;
 }
 
+/* ======== SECÇÃO Filtros ======== */
+
+/* Caixa (cartão) à volta dos filtros */
+#filtros {
+    background-color: rgba(255, 255, 255, 0.9); /* fundo branco translúcido */
+    border-radius: 10px;                        /* cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* sombra para destacar */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;                         /* centraliza o conteúdo */
+}
+
+/* Ajusta os elementos dentro dos filtros */
+#filtros p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+#filtros select,
+#filtros input[type="text"] {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#filtros strong {
+    margin-right: 5px;
+}
+
+
 /* ======== SECÇÃO PRODUTOS ======== */
 #secao-produtos {
   background-color: #2E5A88;
